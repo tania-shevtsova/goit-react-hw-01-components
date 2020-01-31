@@ -6,7 +6,7 @@ const FriendListItem = ({itemChild}) => {
   return (
   <>
     <li className={css.item}>
-   <span className={itemChild.isOnline===true ? css.active : css.inactive }>{itemChild.isOnline}</span>
+   <span className={itemChild.isOnline===true ? css.inactive : css.active }>{itemChild.isOnline}</span>
   <img className={css.avatar} src={itemChild.avatar} alt="" width="48" />
   <p className={css.name}>{itemChild.name}</p>
 </li>
