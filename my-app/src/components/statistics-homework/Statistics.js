@@ -10,7 +10,6 @@ const Statistics = ({stats}) => {
         let z = Math.floor(Math.random() * 256);
         let bgColor = "rgb(" + x + "," + y + "," + z + ")";
     return bgColor;
-    //    document.body.style.background = bgColor;
         }
     
     random_bg_color();
@@ -36,3 +35,10 @@ const Statistics = ({stats}) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes= {
+  stats: PropTypes.arrayOf(PropTypes.shape({
+      label: PropTypes.string,
+      percentage: PropTypes.number
+  }))
+};
