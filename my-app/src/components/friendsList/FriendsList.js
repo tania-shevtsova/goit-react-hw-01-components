@@ -1,15 +1,21 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import FriendListItem from "./FriendListItem";
-import css from "./FriendList.module.css"
+import css from "./FriendList.module.css";
 
 const FriendsList = ({ friends }) => {
   return (
     <ul className={css.friendList}>
-      {friends.map(elem => { 
-     
-        return(friends.length>0 && (<FriendListItem key={elem.id} className="item" itemChild={elem} >
-          </FriendListItem>))
+      {friends.map(elem => {
+        return (
+          friends.length > 0 && (
+            <FriendListItem
+              key={elem.id}
+              className="item"
+              itemChild={elem}
+            ></FriendListItem>
+          )
+        );
       })}
     </ul>
   );
@@ -17,10 +23,12 @@ const FriendsList = ({ friends }) => {
 
 export default FriendsList;
 
-FriendsList.propTypes= {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    avatar: PropTypes.string,
+FriendsList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string,
       name: PropTypes.string,
       isOnline: PropTypes.bool
-  }))
+    })
+  )
 };
