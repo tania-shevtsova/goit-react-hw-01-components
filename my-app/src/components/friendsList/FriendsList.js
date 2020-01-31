@@ -11,13 +11,6 @@ const FriendsList = ({ friends }) => {
         return(friends.length>0 && (<FriendListItem key={elem.id} className="item" itemChild={elem} >
           </FriendListItem>))
       })}
-
-       
-  
-  
-
-        {/* /* Произвольное кол-во FriendListItem, в зависимости от кол-ва объектов в
-      // массиве  */}
     </ul>
   );
 };
